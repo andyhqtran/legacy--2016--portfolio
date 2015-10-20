@@ -99,7 +99,7 @@ module.exports = function (grunt) {
             })
           ]
         },
-        src: '<%= project.css %>/*.css'
+        files: 'assets/css/style.css'
       }
     },
 
