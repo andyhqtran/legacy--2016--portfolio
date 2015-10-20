@@ -115,6 +115,28 @@ module.exports = function (grunt) {
       }
     },
 
+    // Wiredep
+    wiredep: {
+      dev: {
+        options: {
+          dependencies: true,
+          devDependencies: true,
+          'overrides': {
+            'font-awesome': {
+              'main': [
+                'less/font-awesome.less',
+                'scss/font-awesome.scss',
+                'css/font-awesome.css'
+              ]
+            }
+          }
+        },
+        src: [
+          '{,*/,*/*/}*.jade'
+        ],
+      }
+    },
+
     // Notification
     notify: {
       options: {
