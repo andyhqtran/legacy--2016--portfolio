@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "description": "Portfolio site for http://andy.design/",
+  "main": "index.jade",
+  "authors": [
+    "Andy Tran"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/andyhqtran/Portfolio",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jQuery-One-Page-Nav": "~3.0.0"
+  }
+}
