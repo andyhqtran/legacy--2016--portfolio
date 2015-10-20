@@ -62,6 +62,19 @@ module.exports = function (grunt) {
       }
     },
 
+    // HTMLmin
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'index.html': 'index.html',
+        }
+      }
+    },
+
     // Sass
     sass: {
       dev: {
@@ -207,7 +220,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('release', ['jade:dist', 'sass:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
+  grunt.registerTask('release', ['jade:dist', 'html:dist', 'sass:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
   grunt.registerTask('build', ['jade:dev', 'sass:dev', 'notify:build']);
   grunt.registerTask('default', ['connect:server', 'notify:server', 'watch']);
 };
