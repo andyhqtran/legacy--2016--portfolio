@@ -7,24 +7,21 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  width: $width;
-  max-width: $max-width;
+  width: 100%;
   height: $header-height;
+  padding: 0 ((100% - $width) / 2);
   box-sizing: border-box;
   transform: translateX(-50%);
-  transition: 0.3s ease;
+  transition: 0.3s ease, width 0.3s ease 0.3s;
 
   &.hidden {
-    top: -50%;
     opacity: 0;
   }
 
   &.appear {
-    background: $white;
+    background: rgba($white, 0.95);
+    box-shadow: 0 2px 0 rgba($black, 0.1);
     width: 100%;
-    top: 0%;
-    padding: 0 ((100% - $width) / 2);
     opacity: 1;
-    transition: top 0.3s ease, opacity 0.3s ease;
   }
 }

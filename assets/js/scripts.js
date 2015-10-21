@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   // Ripple
   $('[ripple]').on('click', function (e) {
     var rippleDiv = $('<div class="ripple" />'),
@@ -24,17 +25,31 @@ $(document).ready(function () {
   $(window).scroll(function (e) {
     var windowLocation = $(window).scrollTop(),
       pageContainer = $('.page'),
-      header = $('.header');
+      header = $('.header'),
+      headerInital = 0;
 
-    if (windowLocation > 20) {
-      header.addClass('hidden');
+    if (windowLocation > 0 && windowLocation < 200) {
+      header.css({
+        top: (headerInital - windowLocation)
+      })
+      // header.addClass('hidden');
       pageContainer.addClass('expand');
+    } else if (windowLocation > 100) {
+      header.css({
+        top: -100
+      });
     } else {
-      header.removeClass('hidden');
+      header.css({
+        top: 0
+      })
+      // header.removeClass('hidden');
       pageContainer.removeClass('expand');
     }
 
-    if (windowInitial > windowLocation && windowLocation > 200) {
+    if (windowInitial > windowLocation && windowLocation > 400) {
+      header.css({
+        top: '0'
+      })
       header.addClass('appear');
       console.log('up');
     } else {
