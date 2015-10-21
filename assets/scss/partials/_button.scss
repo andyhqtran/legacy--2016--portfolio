@@ -1,0 +1,18 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  background: $accent;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 3px;
+  color: $white;
+  font-weight: $semibold;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.alt {
+    background: $white;
+    color: $accent;
+  }
+}
