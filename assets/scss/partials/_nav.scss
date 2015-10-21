@@ -1,0 +1,37 @@
+.nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    margin: 0 40px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &.active {
+      a {
+        color: $accent;
+        font-weight: $bold;
+      }
+    }
+
+    a {
+      color: $gray;
+      font-size: 12px;
+      font-weight: $semibold;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $dark-gray;
+      }
+    }
+  }
+}

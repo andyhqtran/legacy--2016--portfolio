@@ -6,7 +6,21 @@ html
 
   //- Body
   body
-    | Hello World
+    // Header
+    header(class='header')
 
+      // Brand
+      div(class='brand')
+        h1 Andy
+          b Tran
+
+      // Navigation
+      nav.nav: ul
+        li(class='active'): a(href='#home') Home
+        li: a(href='#') Portfolio
+        li: a(href='http://represent.io/andy') Resume
+        li: a(href='#contact') Contact
+
+    .test
   //- Footer
   include lib/footer.tpl.jade
