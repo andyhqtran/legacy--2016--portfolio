@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+  // Append Top Button
+  $('body').append('<a id="top" href="#" ripple ripple-color="#FFFFFF" class="material-icons">&#xE316;</a>');
+
   // Ripple
   $('[ripple]').on('click', function (e) {
     var rippleDiv = $('<div class="ripple" />'),
@@ -17,6 +20,14 @@ $(document).ready(function () {
     window.setTimeout(function () {
       rippleDiv.remove();
     }, 1900);
+  });
+
+  $('#top').on('click', function (e) {
+    e.preventDefault();
+
+    $("html, body").animate({
+      scrollTop: 0
+    }, 'slow');
   });
 
   // Scroll Check
@@ -58,5 +69,11 @@ $(document).ready(function () {
     }
 
     windowInitial = windowLocation;
+
+    if (windowLocation > 600) {
+      $('#top').addClass('visible');
+    } else {
+      $('#top').removeClass('visible');
+    }
   });
 });
