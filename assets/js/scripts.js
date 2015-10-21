@@ -41,9 +41,9 @@ $(document).ready(function () {
 
     if (windowLocation > 0 && windowLocation < 200) {
       header.css({
-        top: (headerInital - windowLocation)
+        top: (headerInital - (windowLocation * 4))
       })
-      // header.addClass('hidden');
+      header.addClass('hidden');
       pageContainer.addClass('expand');
     } else if (windowLocation > 100) {
       header.css({
@@ -53,7 +53,7 @@ $(document).ready(function () {
       header.css({
         top: 0
       })
-      // header.removeClass('hidden');
+      header.removeClass('hidden');
       pageContainer.removeClass('expand');
     }
 
