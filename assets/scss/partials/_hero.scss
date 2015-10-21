@@ -1,0 +1,40 @@
+.hero {
+  position: relative;
+  background: $accent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/shutterstock_153860405-min.jpg") center center;
+  background-size: cover;
+  padding: 240px 0 200px;
+  text-align: center;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($accent, 0.8);
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+  }
+
+  &-text {
+    z-index: 1;
+    position: relative;
+    padding: 0 15%;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    color: $white;
+    font-size: 36px;
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 0 40px;
+    color: rgba($white, 0.8);
+    font-size: 16px;
+  }
+}

@@ -21,6 +21,19 @@ html
         li: a(href='http://represent.io/andy') Resume
         li: a(href='#contact') Contact
 
-    .test
+    .page
+      section(class='hero')
+        +container('true')
+          +row
+            +col(4)
+              div(class='hero-text')
+                h1 I'm Andy Tran.
+                p Hello, I am a self-taught front-end website developer. Sailing through life, I unexpectedly developed a strong passion for website development in which I use to help the community around me. I spend at least 12 hours a day, pouring my heart into code. You can often find me doing random pens on CodePen!
+                a.(class='btn alt'
+                   href='#portfolio'
+                   data-anchor='true'
+                   ripple
+                   ripple-color='#{accent}') View Portfolio
+      .test
   //- Footer
   include lib/footer.tpl.jade
