@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         '.gitignore', '.gitmodules',
         '*.jade', 'lib',
         'scss', '*.scss', '*.sass', '*.map', '.sass-cache',
-        'bower_components', 'node_modules',
+        'bower_components', 'Gruntfile.js', 'node_modules',
       ],
 
       build: [
