@@ -1,3 +1,4 @@
 {
-  "directory": "assets/components"
+  "directory": "assets/components",
+  "allow_root": true
 }
