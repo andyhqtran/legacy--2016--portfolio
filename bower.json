@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~1.8.0",
+    "jquery": "~2.1.4",
     "jQuery-One-Page-Nav": "~3.0.0"
   }
 }
