@@ -220,7 +220,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('release', ['jade:dist', 'html:dist', 'sass:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
+  grunt.registerTask('release', ['jade:dist', 'htmlmin:dist', 'sass:dist', 'postcss:dist', 'cssmin:dist', 'notify:release', 'clean:release']);
   grunt.registerTask('build', ['jade:dev', 'sass:dev', 'notify:build']);
   grunt.registerTask('default', ['connect:server', 'notify:server', 'watch']);
 };
