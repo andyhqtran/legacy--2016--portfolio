@@ -10,6 +10,13 @@
   font-weight: $semibold;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.3s ease;
+
+  @include elevation(1);
+
+  &:hover {
+    @include elevation(3);
+  }
 
   &.alt {
     background: $white;
