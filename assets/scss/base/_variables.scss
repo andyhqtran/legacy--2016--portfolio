@@ -29,7 +29,7 @@ $base-font-weight: $regular;
 $base-line-height: 1.6em;
 
 // Layout Settings
-$background: null;
+$background: #F3F3F3;
 $width: 90%;
 $max-width: 1920px;
 
@@ -40,3 +40,6 @@ $gutters: 20px;
 
 // Header Settings
 $header-height: 100px;
+
+// Page Settings
+$page-background: $white;
