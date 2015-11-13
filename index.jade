@@ -23,17 +23,25 @@ html
 
     .page
       section(class='hero')
-        +container('true')
-          +row
-            +col(4)
-              div(class='hero-text')
-                h1 I'm Andy Tran.
-                p Hello, I am a self-taught front-end website developer. Sailing through life, I unexpectedly developed a strong passion for website development in which I use to help the community around me. I spend at least 12 hours a day, pouring my heart into code. You can often find me doing random pens on CodePen!
-                a(class='btn alt'
-                   href='#portfolio'
-                   data-anchor='true'
-                   ripple
-                   ripple-color='#{accent}') View Portfolio
+        +container('true'): +row: +col(12)
+          div(class='hero-text')
+            h1 I'm Andy Tran.
+            p Hello, I am a self-taught front-end website developer. Sailing through life, I unexpectedly developed a strong passion for website development in which I use to help the community around me. I spend at least 12 hours a day, pouring my heart into code. You can often find me doing random pens on CodePen!
+            a(class='btn alt'
+               href='#portfolio'
+               data-anchor='true'
+               ripple
+               ripple-color='#{accent}') View Portfolio
+
+      section(class='reasons')
+        +container: +row
+          +col(4)
+            +blurb('like', 'Passionate', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.')
+          +col(4)
+            +blurb('gleam', 'Lightning Fast', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.')
+          +col(4)
+            +blurb('light', 'Creative', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.')
+
       .test
   //- Footer
   include lib/footer.tpl.jade

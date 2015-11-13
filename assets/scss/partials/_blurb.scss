@@ -1,0 +1,33 @@
+.blurb {
+  margin: $gutters 0;
+  padding: 0 $gutters;
+  text-align: center;
+
+  .icon {
+    margin: 0 0 ($gutters * 2);
+    color: $gray;
+    font-size: 48px;
+    font-weight: $bold;
+    transition: 0.3s ease;
+  }
+
+  .title {
+    margin: 0 0 $gutters;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  &:hover {
+    .icon {
+      color: $accent;
+    }
+
+    .title {
+      color: $accent;
+    }
+  }
+}

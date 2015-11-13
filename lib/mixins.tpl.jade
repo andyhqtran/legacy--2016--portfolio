@@ -16,3 +16,17 @@ mixin row
 mixin col(columns)
   div(class='col col-#{columns}')
     block
+
+//- Material Icon
+mixin icon(name, thin)
+  if !thin
+    i(class='icon material-icons')=name
+  else
+    i(class='icon pe-7s-#{name}')
+
+//- Blurb
+mixin blurb(icon, title, description)
+  div(class='blurb')
+    +icon(icon, true)
+    h4(class='title')=title
+    p=description
