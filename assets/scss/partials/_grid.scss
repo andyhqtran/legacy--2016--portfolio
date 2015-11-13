@@ -22,11 +22,14 @@
 }
 
 /* Column */
-@for $i from 1 through $columns {
-  .col-#{$i} {
-    width: percentage($i / $columns);
-    flex-basis: percentage($i / $columns);
-    padding: 0 ($gutters / 2);
-    box-sizing: border-box;
+.col {
+  padding: 0 ($gutters / 2);
+  box-sizing: border-box;
+
+  @for $i from 1 through $columns {
+    &-#{$i} {
+      width: percentage($i / $columns);
+      flex-basis: percentage($i / $columns);
+    }
   }
 }
