@@ -216,6 +216,10 @@ module.exports = function (grunt) {
       jade: {
         files: '{,*/,*/*/,*/*/*/,*/*/*/*/,*/*/*/*/*/}*.jade',
         tasks: ['jade:dev', 'wiredep', 'notify:jade'],
+      },
+      js: {
+        files: '**/*.js',
+        tasks: ['notify:js']
       }
     }
   });
