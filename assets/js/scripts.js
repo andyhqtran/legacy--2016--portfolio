@@ -78,21 +78,27 @@ $(document).ready(function () {
     }
   });
 
+  // Add Overlay
   function overlayAdd() {
+    // Add Overlay
     $('body').prepend($('<div class="overlay"></div>').hide().fadeIn(300));
 
+    // Add body class
     setTimeout(function () {
       $('body').addClass('opened');
     }, 300);
 
+    // Remove Overlay
     overlayRemove();
   }
 
+  // Remove Overlay
   function overlayRemove() {
-
     $('.overlay').on('click', function () {
+      // Remove body class
       $('body').removeClass('opened');
 
+      // Hide Overlay
       $(this).delay(300).fadeOut(300, function () {
         $(this).remove();
       });
@@ -103,8 +109,10 @@ $(document).ready(function () {
   $('.nav-toggle').on('click', function (e) {
     e.preventDefault();
 
+    // Add Overlay
     overlayAdd();
 
+    // Clone nav to overlay
     $('.nav').clone(true).prependTo('.overlay').show();
   });
 });
