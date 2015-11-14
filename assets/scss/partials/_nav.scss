@@ -34,4 +34,58 @@
       }
     }
   }
+
+  // Toggle
+  &-toggle {
+    position: relative;
+    z-index: 100;
+    display: none;
+    width: 24px;
+    height: 18px;
+
+    span {
+      display: block;
+      background: $accent;
+      height: 2px;
+      transition: 0.3s ease;
+
+      &:nth-child(2) {
+        margin: 6px 0;
+      }
+    }
+
+    &.toggled {
+      span {
+        background: $white;
+
+        &:first-child {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+
+      .overlay & {
+        position: fixed;
+        top: 5%;
+        right: 5%;
+      }
+    }
+  }
+}
+
+@include media(tablet) {
+  .nav {
+    display: none;
+
+    &-toggle {
+      display: block;
+    }
+  }
 }

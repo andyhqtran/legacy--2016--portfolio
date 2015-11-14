@@ -77,4 +77,28 @@ $(document).ready(function () {
       $('#top').removeClass('visible');
     }
   });
+
+  // Overlay Removal
+  function overlayRemoval() {
+    $('.overlay').on('click', function () {
+      // If Nav Toggle is toggled, then remove.
+      $('.nav-toggle').stop().removeClass('toggled');
+
+      $(this).fadeOut(300, function () {
+        $(this).remove();
+      });
+    });
+  }
+
+  // Overlay Prepend
+  function overlayPrepend() {
+    $('body').prepend($('<div class="overlay"></div>').hide().fadeIn());
+  }
+
+  // Mobile Toggle
+  $('.nav-toggle').on('click', function () {
+    $(this).stop().toggleClass('toggled');
+    overlayPrepend();
+    overlayRemoval();
+  });
 });
