@@ -33,3 +33,10 @@
     }
   }
 }
+
+@include media(tablet) {
+  .col {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
