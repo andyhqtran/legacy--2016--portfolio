@@ -80,7 +80,9 @@ $(document).ready(function () {
 
   // Overlay Removal
   function overlayRemoval() {
-    $('.overlay').on('click', function () {
+    $('.overlay').on('click', function (e) {
+      e.preventDefault();
+
       // If Nav Toggle is toggled, then remove.
       $('.nav-toggle').stop().removeClass('toggled');
 
@@ -96,7 +98,9 @@ $(document).ready(function () {
   }
 
   // Mobile Toggle
-  $('.nav-toggle').on('click', function () {
+  $('.nav-toggle').on('click', function (e) {
+    e.preventDefault();
+
     $(this).stop().toggleClass('toggled');
     overlayPrepend();
     overlayRemoval();
