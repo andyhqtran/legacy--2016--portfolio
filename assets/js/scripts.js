@@ -78,31 +78,33 @@ $(document).ready(function () {
     }
   });
 
-  // Overlay Removal
-  function overlayRemoval() {
-    $('.overlay').on('click', function (e) {
-      e.preventDefault();
+  function overlayAdd() {
+    $('body').prepend($('<div class="overlay"></div>').hide().fadeIn(300));
 
-      // If Nav Toggle is toggled, then remove.
-      $('.nav-toggle').stop().removeClass('toggled');
+    setTimeout(function () {
+      $('body').addClass('opened');
+    }, 300);
 
-      $(this).fadeOut(300, function () {
-        $(this).remove();
-      });
-    });
+    overlayRemove();
   }
 
-  // Overlay Prepend
-  function overlayPrepend() {
-    $('body').prepend($('<div class="overlay"></div>').hide().fadeIn());
+  function overlayRemove() {
+
+    $('.overlay').on('click', function () {
+      $('body').removeClass('opened');
+
+      $(this).delay(300).fadeOut(300, function () {
+        $(this).remove();
+      });
+    })
   }
 
   // Mobile Toggle
   $('.nav-toggle').on('click', function (e) {
     e.preventDefault();
 
-    $(this).stop().toggleClass('toggled');
-    overlayPrepend();
-    overlayRemoval();
+    overlayAdd();
+
+    $('.nav').clone(true).prependTo('.overlay').show();
   });
 });
