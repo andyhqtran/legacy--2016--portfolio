@@ -113,6 +113,8 @@ $(document).ready(function () {
     overlayAdd();
 
     // Clone nav to overlay
-    $('.nav').clone(true).prependTo('.overlay').show();
+    $('.nav').clone(true).prependTo('.overlay').css({
+      'display': 'flex'
+    });
   });
 });
