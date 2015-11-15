@@ -44,9 +44,14 @@ module.exports = function (grunt) {
             debug: true,
           }
         },
-        files: {
-          'index.html': 'index.jade'
-        }
+
+        files: [{
+          cwd: '.',
+          src: '*.jade',
+          dest: '.',
+          expand: true,
+          ext: '.html'
+        }]
       },
 
       dist: {
@@ -56,9 +61,14 @@ module.exports = function (grunt) {
             debug: false
           }
         },
-        files: {
-          'index.html': 'index.jade'
-        }
+
+        files: [{
+          cwd: '.',
+          src: '*.jade',
+          dest: '.',
+          expand: true,
+          ext: '.html'
+        }]
       }
     },
 
