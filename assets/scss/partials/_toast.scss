@@ -1,10 +1,16 @@
 .toast {
   z-index: 200;
   position: fixed;
-  bottom: $gutters;
-  left: $gutters;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
   background: #323232;
+  min-width: 300px;
   border-radius: 2px;
+  margin: $gutters;
 
   @include elevation(2);
 
@@ -16,6 +22,7 @@
     display: inline-block;
     padding: 5px 0;
     vertical-align: middle;
+    align-self: flex-start;
   }
 
   .btn {
