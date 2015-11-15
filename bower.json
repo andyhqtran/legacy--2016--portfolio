@@ -17,7 +17,9 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "jQuery-One-Page-Nav": "~3.0.0"
+    "jQuery-One-Page-Nav": "~3.0.0",
+    "animate.css": "~3.4.0",
+    "waypoints": "~4.0.0"
   },
   "resolutions": {
     "jquery": "~2.1.4"
