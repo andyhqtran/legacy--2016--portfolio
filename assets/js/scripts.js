@@ -93,7 +93,7 @@ $(document).ready(function () {
   // Add Overlay
   function overlayAdd() {
     // Add Overlay
-    $('body').prepend($('<div class="overlay"></div>').hide().fadeIn(300));
+    $('body').prepend($('<div class="overlay"></div>').hide().fadeIn(300, 'swing'));
 
     // Add body class
     setTimeout(function () {
@@ -111,7 +111,7 @@ $(document).ready(function () {
       $('body').removeClass('opened');
 
       // Hide Overlay
-      $(this).delay(300).fadeOut(300, function () {
+      $(this).delay(300).fadeOut(300, 'swing', function () {
         $(this).remove();
       });
     })
@@ -125,7 +125,7 @@ $(document).ready(function () {
     overlayAdd();
 
     // Clone nav to overlay
-    $('.nav').clone(true).prependTo('.overlay').css({
+    $('.header .nav').clone(true).prependTo('.overlay').css({
       'display': 'flex'
     });
   });
@@ -156,7 +156,7 @@ $(document).ready(function () {
   animation('.error ', 2, 0);
 
   $('.toast').children('.btn').on('click', function () {
-    $(this).parent().delay(300).fadeOut(300, function () {
+    $(this).parent().delay(300).fadeOut(300, 'swing', function () {
       $(this).remove();
     });
   });

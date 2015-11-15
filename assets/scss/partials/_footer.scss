@@ -1,0 +1,32 @@
+.footer {
+  background: #212121;
+  border-bottom: 4px solid $accent;
+  padding: $gutters 0;
+
+  .col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    color: $white;
+    font-size: 12px;
+    font-weight: $semibold;
+    text-transform: uppercase;
+  }
+
+  .nav {
+    li {
+      &.active {
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    a {
+      color: rgba($white, 0.8);
+    }
+  }
+}
