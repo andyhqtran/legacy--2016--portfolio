@@ -37,6 +37,8 @@ $(document).ready(function () {
 
   ripple();
 
+
+
   // Scroll Check
   var windowInitial = 0;
 
@@ -46,13 +48,19 @@ $(document).ready(function () {
       header = $('.header'),
       headerInital = 0;
 
-    if (windowLocation > 0 && windowLocation < 200) {
+    var headerCheck = $('.header').offset().top;
+
+    if (windowLocation > 0 || headerCheck > 0) {
+      pageContainer.addClass('expand');
+    }
+
+    if (windowLocation > 0 && windowLocation < 200 || headerCheck > 0 && windowLocation < 200) {
       header.css({
         top: (headerInital - (windowLocation * 4))
       })
       header.addClass('hidden');
       pageContainer.addClass('expand');
-    } else if (windowLocation > 100) {
+    } else if (windowLocation > 100 || headerCheck > 100) {
       header.css({
         top: -100
       });
