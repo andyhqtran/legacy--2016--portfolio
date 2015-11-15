@@ -12,6 +12,12 @@
   animation: slideInUp 1s ease;
   color: $white;
 
+  p {
+    display: inline-block;
+    padding: 5px 0;
+    vertical-align: middle;
+  }
+
   .btn {
     background: 0;
     box-shadow: none;

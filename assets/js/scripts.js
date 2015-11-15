@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('.page').after($('<div class="toast">Hey there! Just wanted to let you know that this site is still under development.<button ripple ripple-color="#2196F3" class="btn">Okay</button></div>'));
+  $('.page').after($('<div class="toast"><p>Hey there! Just wanted to let you know that this site is still under development.</p><button ripple ripple-color="#2196F3" class="btn">Okay</button></div>'));
 
   // Append Top Button
   $('body').append('<a id="top" href="#" ripple ripple-color="#FFFFFF" class="material-icons">&#xE316;</a>');
@@ -140,7 +140,6 @@ $(document).ready(function () {
 
     $(parent).waypoint(function () {
       for (var i = 0; i <= total; i++) {
-        console.log(i + initial);
         itemAnimationDelay(i, (i * 200));
       }
 
@@ -159,6 +158,19 @@ $(document).ready(function () {
     $(this).parent().delay(300).fadeOut(300, 'swing', function () {
       $(this).remove();
     });
+  });
+
+  $('.toasttest').on('click', function (e) {
+    e.preventDefault();
+
+    var toastCount = $('.toast').length,
+      toastHeight = $('.toast').outerHeight() + 20;
+
+    $('.page').after($('<div class="toast"><p>Toast</p><button class="btn">Close</button></div>').css({
+      'bottom': toastHeight * toastCount + 20
+    }));
+
+    ripple();
   });
 
 });
