@@ -19,13 +19,14 @@ html
 
           // Hero Text
           div(class='hero-text')
-            h1 I'm Andy Tran.
-            p Hello, I am a self-taught front-end website developer. Sailing through life, I unexpectedly developed a strong passion for website development in which I use to help the community around me. I spend at least 12 hours a day, pouring my heart into code. You can often find me doing random pens on CodePen!
+            h1(animation-id='1') I'm Andy Tran.
+            p(animation-id='2') Hello, I am a self-taught front-end website developer. Sailing through life, I unexpectedly developed a strong passion for website development in which I use to help the community around me. I spend at least 12 hours a day, pouring my heart into code. You can often find me doing random pens on CodePen!
             a(class='btn alt'
                href='#portfolio'
                data-anchor='true'
                ripple
-               ripple-color='#{accent}') View Portfolio
+               ripple-color='#{accent}'
+               animation-id='3') View Portfolio
 
       // Reasons
       section(class='reasons')
@@ -33,15 +34,15 @@ html
           +col(4)
 
             // Blurb
-            +blurb('like', 'Passionate', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.')
+            +blurb('like', 'Passionate', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', '4')
           +col(4)
 
             // Blurb
-            +blurb('gleam', 'Lightning Fast', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.')
+            +blurb('gleam', 'Lightning Fast', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', '5')
           +col(4)
 
             // Blurb
-            +blurb('light', 'Creative', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.')
+            +blurb('light', 'Creative', 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', '6')
 
       .test
   //- Footer

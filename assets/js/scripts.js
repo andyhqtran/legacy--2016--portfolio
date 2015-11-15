@@ -63,10 +63,8 @@ $(document).ready(function () {
         top: '0'
       })
       header.addClass('appear');
-      console.log('up');
     } else {
       header.removeClass('appear');
-      console.log('download');
     }
 
     windowInitial = windowLocation;
@@ -117,4 +115,28 @@ $(document).ready(function () {
       'display': 'flex'
     });
   });
+
+  function animation(parent, total, initial) {
+
+    function itemAnimationDelay(id, delay) {
+      setTimeout(function () {
+        $('[animation-id=' + (id + initial) + ']').addClass('fadeInUp animated');
+      }, delay);
+    }
+
+    $(parent).waypoint(function () {
+      for (var i = 0; i <= total; i++) {
+        console.log(i + initial);
+        itemAnimationDelay(i, (i * 200));
+      }
+
+    }, {
+      offset: '50 %'
+    });
+  }
+
+  animation('.hero ', 3, 0);
+
+  animation('.reasons ', 3, 3);
+
 });

@@ -135,6 +135,11 @@ module.exports = function (grunt) {
           dependencies: true,
           devDependencies: true,
           'overrides': {
+            'waypoints': {
+              'main': [
+                "lib/jquery.waypoints.min.js"
+              ]
+            },
             'font-awesome': {
               'main': [
                 'less/font-awesome.less',

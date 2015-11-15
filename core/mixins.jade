@@ -25,8 +25,9 @@ mixin icon(name, thin)
     i(class='icon pe-7s-#{name}')
 
 //- Blurb
-mixin blurb(icon, title, description)
-  div(class='blurb')
+mixin blurb(icon, title, description, animation)
+  div(class='blurb'
+      animation-id=animation)
     +icon(icon, true)
     h4(class='title')=title
     p=description
