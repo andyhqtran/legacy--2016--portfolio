@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('.page').after($('<div class="toast">Hey there! Just wanted to let you know that this site is still under development.<a href="#" ripple ripple-color="#2196F3" class="btn">Okay</a></div>'));
+  $('.page').after($('<div class="toast">Hey there! Just wanted to let you know that this site is still under development.<button ripple ripple-color="#2196F3" class="btn">Okay</button></div>'));
 
   // Append Top Button
   $('body').append('<a id="top" href="#" ripple ripple-color="#FFFFFF" class="material-icons">&#xE316;</a>');
