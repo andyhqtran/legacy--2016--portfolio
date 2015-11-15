@@ -12,4 +12,8 @@
     width: 100%;
     margin: 0 auto;
   }
+
+  .error404 & {
+    height: calc(100% - 100px);
+  }
 }

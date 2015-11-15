@@ -5,13 +5,20 @@ html
   include core/head
 
   //- Body
-  body
+  body(class='error404')
 
     // Header
     include lib/header
 
     // Page Container
     .page
+      .error
+        div(class='error-text')
+          h1 Uh no! Something doesn't look right here!
+          p Hey there! Either the page that you have requested is <b>unavailable</b> or still <b>underconstruction</b>.
+            br
+            | If you would like more information, feel free to <a href='mailto:hello@andytran.me'>contact me</a>.
+
 
   //- Footer
   include core/foot
