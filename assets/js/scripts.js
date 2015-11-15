@@ -160,7 +160,7 @@ $(document).ready(function () {
     });
   });
 
-  $('.toasttest').on('click', function (e) {
+  $('class').on('click', function (e) {
     e.preventDefault();
 
     var toastCount = $('.toast').length,
