@@ -9,6 +9,7 @@
   @include elevation(2);
 
   padding: 14px 24px;
+  animation: slideInUp 1s ease;
   color: $white;
 
   .btn {
@@ -18,5 +19,17 @@
     padding: 8px 12px;
     vertical-align: middle;
     color: $accent;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }

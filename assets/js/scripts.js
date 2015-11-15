@@ -1,35 +1,41 @@
 $(document).ready(function () {
 
+  $('.page').after($('<div class="toast">Hey there! Just wanted to let you know that this site is still under development.<a href="#" ripple ripple-color="#2196F3" class="btn">Okay</a></div>'));
+
   // Append Top Button
   $('body').append('<a id="top" href="#" ripple ripple-color="#FFFFFF" class="material-icons">&#xE316;</a>');
 
   // Ripple
-  $('[ripple]').on('click', function (e) {
-    var rippleDiv = $('<div class="ripple" />'),
-      rippleSize = 60,
-      rippleOffset = $(this).offset(),
-      rippleY = e.pageY - rippleOffset.top,
-      rippleX = e.pageX - rippleOffset.left,
-      ripple = $('.ripple');
+  function ripple() {
+    $('[ripple]').on('click', function (e) {
+      var rippleDiv = $('<div class="ripple" />'),
+        rippleSize = 60,
+        rippleOffset = $(this).offset(),
+        rippleY = e.pageY - rippleOffset.top,
+        rippleX = e.pageX - rippleOffset.left,
+        ripple = $('.ripple');
 
-    rippleDiv.css({
-      top: rippleY - (rippleSize / 2),
-      left: rippleX - (rippleSize / 2),
-      background: $(this).attr("ripple-color")
-    }).appendTo($(this));
+      rippleDiv.css({
+        top: rippleY - (rippleSize / 2),
+        left: rippleX - (rippleSize / 2),
+        background: $(this).attr("ripple-color")
+      }).appendTo($(this));
 
-    window.setTimeout(function () {
-      rippleDiv.remove();
-    }, 1900);
-  });
+      window.setTimeout(function () {
+        rippleDiv.remove();
+      }, 1900);
+    });
 
-  $('#top').on('click', function (e) {
-    e.preventDefault();
+    $('#top').on('click', function (e) {
+      e.preventDefault();
 
-    $("html, body").animate({
-      scrollTop: 0
-    }, 'slow');
-  });
+      $("html, body").animate({
+        scrollTop: 0
+      }, 'slow');
+    });
+  }
+
+  ripple();
 
   // Scroll Check
   var windowInitial = 0;
@@ -138,5 +144,11 @@ $(document).ready(function () {
   animation('.hero ', 3, 0);
 
   animation('.reasons ', 3, 3);
+
+  $('.toast').children('.btn').on('click', function () {
+    $(this).parent().delay(300).fadeOut(300, function () {
+      $(this).remove();
+    });
+  });
 
 });
