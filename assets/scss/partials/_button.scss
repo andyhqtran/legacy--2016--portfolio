@@ -14,7 +14,8 @@
 
   @include elevation(1);
 
-  &:hover {
+  &:hover,
+  &:focus {
     @include elevation(3);
   }
 

@@ -1,0 +1,22 @@
+.toast {
+  z-index: 200;
+  position: fixed;
+  right: $gutters;
+  bottom: $gutters;
+  background: #323232;
+  border-radius: 2px;
+
+  @include elevation(2);
+
+  padding: 14px 24px;
+  color: $white;
+
+  .btn {
+    background: 0;
+    box-shadow: none;
+    margin: 0 0 0 48px;
+    padding: 8px 12px;
+    vertical-align: middle;
+    color: $accent;
+  }
+}
