@@ -16,7 +16,7 @@
     transform-origin: center;
   }
 
-  .error-text {
+  &-text {
     z-index: 1;
     position: absolute;
     top: 50%;
@@ -24,22 +24,23 @@
     width: 80%;
     transform: translate(-50%, -50%);
     text-align: center;
+    text-shadow: 0 2px 2px rgba($black, 0.2);
+  }
 
-    h1 {
-      margin: 0 0 ($gutters * 2);
-      color: $white;
-      font-size: 48px;
-    }
+  h1 {
+    margin: 0 0 ($gutters * 2);
+    color: $white;
+    font-size: 48px;
+  }
 
-    p {
-      color: rgba($white, 0.8);
-      font-size: 18px;
-      line-height: 1.8em;
-    }
+  p {
+    color: rgba($white, 0.8);
+    font-size: 18px;
+    line-height: 1.8em;
+  }
 
-    a {
-      color: $white;
-      border-bottom: 1px solid $white;
-    }
+  a {
+    color: $white;
+    border-bottom: 1px solid $white;
   }
 }

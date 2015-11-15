@@ -145,6 +145,8 @@ $(document).ready(function () {
 
   animation('.reasons ', 3, 3);
 
+  animation('.error ', 2, 0);
+
   $('.toast').children('.btn').on('click', function () {
     $(this).parent().delay(300).fadeOut(300, function () {
       $(this).remove();
