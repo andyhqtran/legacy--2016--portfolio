@@ -27,6 +27,10 @@
 
     a {
       color: rgba($white, 0.8);
+
+      &:hover {
+        color: $white;
+      }
     }
   }
 }
