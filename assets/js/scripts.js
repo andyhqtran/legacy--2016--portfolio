@@ -164,10 +164,10 @@ $(document).ready(function () {
     e.preventDefault();
 
     var toastCount = $('.toast').length,
-      toastHeight = $('.toast').outerHeight() + 20;
+      toastHeight = $('.toast').outerHeight() + 24;
 
     $('.page').after($('<div class="toast"><p>Toast</p><button class="btn">Close</button></div>').css({
-      'bottom': toastHeight * toastCount + 20
+      'bottom': toastHeight * toastCount + 24
     }));
 
     ripple();
