@@ -20,9 +20,9 @@
 
   p {
     display: inline-block;
+    flex-grow: 2;
     padding: 5px 0;
     vertical-align: middle;
-    align-self: flex-start;
   }
 
   .btn {

@@ -1,7 +1,6 @@
 .footer {
   background: #212121;
-  border-bottom: 4px solid $accent;
-  padding: $gutters 0;
+  padding: ($gutters * 2) 0;
 
   .col {
     display: flex;
@@ -10,7 +9,7 @@
   }
 
   .copyright {
-    color: $white;
+    color: rgba($white, 0.8);
     font-size: 12px;
     font-weight: $semibold;
     text-transform: uppercase;

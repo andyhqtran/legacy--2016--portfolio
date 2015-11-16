@@ -121,10 +121,12 @@
 
 @include media(tablet) {
   .nav {
-    display: none;
+    .header & {
+      display: none;
 
-    &-toggle {
-      display: block;
+      &-toggle {
+        display: block;
+      }
     }
   }
 }
