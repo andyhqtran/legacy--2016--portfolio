@@ -1,19 +1,12 @@
 .error {
   position: relative;
   background: $accent url("../img/hero.jpg") center bottom no-repeat;
+  background-size: cover;
   height: 100%;
   overflow: hidden;
 
   &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba($accent, 0.8);
-    width: 200%;
-    height: 200%;
-    transform: translate(-50%, -50%);
-    transform-origin: center;
+    @extend .hero:before;
   }
 
   &-text {
