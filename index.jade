@@ -48,6 +48,14 @@ html
 
       .test Content Coming Soon
 
+      section(class='testimonials')
+        +container: +row: +col(12)
+          blockquote(class='testimonial')
+            p(class='quote') Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            span(class='meta')
+              div(class='avatar'): img(src='assets/img/avatar.png')
+              a(href='#') Andy Tran
+
       //- Footer
       include lib/footer
 

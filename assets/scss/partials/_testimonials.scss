@@ -1,0 +1,44 @@
+.testimonials {
+  background: $accent;
+  padding: ($gutters * 2) 0;
+  color: $white;
+  text-align: center;
+
+  // Testimonial
+  .testimonial {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .quote {
+    margin: 0 0 ($gutters / 2);
+    font-style: italic;
+
+    &:before,
+    &:after {
+      content: '"';
+    }
+  }
+
+  .meta {
+    display: inline-block;
+
+    .avatar {
+      display: inline-block;
+      width: 56px;
+      margin: 0 ($gutters / 2) 0 0;
+      border-radius: 100%;
+      vertical-align: middle;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+}
