@@ -50,11 +50,13 @@ html
 
       section(class='testimonials')
         +container: +row: +col(12)
-          blockquote(class='testimonial')
-            p(class='quote') Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            span(class='meta')
-              div(class='avatar'): img(src='assets/img/avatar.png')
-              a(href='#') Andy Tran
+          +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Andy Tran', '#', true)
+          +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Justin Kwak', '#')
+          +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Andrew Shen', '#')
+          a(class='testimonials-prev'
+            href='#'): +icon('navigate_before')
+          a(class='testimonials-next'
+            href='#'): +icon('navigate_next')
 
       //- Footer
       include lib/footer

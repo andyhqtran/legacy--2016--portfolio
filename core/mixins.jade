@@ -31,3 +31,11 @@ mixin blurb(icon, title, description, animation)
     +icon(icon, true)
     h4(class='title')=title
     p=description
+
+//- Testimonial
+mixin testimonial(quote, author, url, active)
+  blockquote(class=active ? 'testimonial active': 'testimonial')
+    p(class='quote')=quote
+    span(class='meta')
+      div(class='avatar'): img(src='assets/img/avatar.png')
+      a(href=url)=author

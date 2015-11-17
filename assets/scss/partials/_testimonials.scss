@@ -1,17 +1,23 @@
 .testimonials {
+  position: relative;
   background: $accent;
-  padding: ($gutters * 2) 0;
+  padding: ($gutters * 3) 0;
   color: $white;
   text-align: center;
 
   // Testimonial
   .testimonial {
+    display: none;
     max-width: 768px;
     margin: 0 auto;
+
+    &.active {
+      display: block;
+    }
   }
 
   .quote {
-    margin: 0 0 ($gutters / 2);
+    margin: 0 0 $gutters;
     font-style: italic;
 
     &:before,
@@ -40,5 +46,21 @@
     a {
       color: inherit;
     }
+  }
+
+  &-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    transform: translateY(-50%);
+    color: $white;
+  }
+
+  &-next {
+    @extend .testimonials-prev;
+
+    right: 0;
+    left: auto;
   }
 }
