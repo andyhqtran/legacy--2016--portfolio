@@ -173,4 +173,44 @@ $(document).ready(function () {
     ripple();
   });
 
+  // Tab Items
+  var testimonial = $('.testimonial'),
+    currentTestimonial = testimonial.filter('.active');
+
+  // Next Button
+  $('.testimonials-next').on('click', function (e) {
+    e.preventDefault();
+
+    var nextItem = currentTestimonial.next();
+
+    currentTestimonial.stop().fadeOut(300, function () {
+      $(this).removeClass('active');
+
+      if (nextItem.length) {
+        currentTestimonial = nextItem.fadeIn(300).addClass('active');
+      } else {
+        currentTestimonial = testimonial.first().fadeIn(300).addClass('active');
+      }
+    });
+
+
+  });
+
+  // Prev Button
+  $('.testimonials-prev').on('click', function (e) {
+    e.preventDefault();
+
+    var prevItem = currentTestimonial.prev();
+
+    currentTestimonial.stop().fadeOut(300, function () {
+      $(this).removeClass('active');
+
+      if (prevItem.length) {
+        currentTestimonial = prevItem.fadeIn(300).addClass('active');
+      } else {
+        currentTestimonial = testimonial.last().fadeIn(300).addClass('active');
+      }
+    });
+
+  });
 });

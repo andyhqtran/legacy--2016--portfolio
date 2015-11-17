@@ -12,6 +12,8 @@
     @extend .hero:before;
   }
 
+  &-wrapper {}
+
   // Testimonial
   .testimonial {
     display: none;

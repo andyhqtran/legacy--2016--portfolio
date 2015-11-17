@@ -50,9 +50,10 @@ html
 
       section(class='testimonials')
         +container: +row: +col(12)
-          +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Andy Tran', '#', true)
-          +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Justin Kwak', '#')
-          +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Andrew Shen', '#')
+          div(class='testimonials-wrapper')
+            +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Justin Kwak', '#', true)
+            +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Andrew Goett', '#')
+            +testimonial('Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Anthony Tran', '#')
           a(class='testimonials-prev'
             href='#'): +icon('navigate_before')
           a(class='testimonials-next'
