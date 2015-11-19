@@ -10,6 +10,8 @@
 
   &:before {
     @extend .hero:before;
+
+    background: rgba($accent, 0.95);
   }
 
   &-wrapper {}
