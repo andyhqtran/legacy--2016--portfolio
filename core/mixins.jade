@@ -30,7 +30,7 @@ mixin icon(name, type)
 mixin blurb(icon, title, description, animation)
   div(class='blurb'
       animation-id=animation)
-    +icon(icon, true)
+    +icon(icon, 'thin')
     h4(class='title')=title
     p=description
 
