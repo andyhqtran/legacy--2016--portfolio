@@ -18,11 +18,13 @@ mixin col(columns)
     block
 
 //- Material Icon
-mixin icon(name, thin)
-  if !thin
-    i(class='icon material-icons')=name
-  else
+mixin icon(name, type)
+  if type == 'thin'
     i(class='icon pe-7s-#{name}')
+  else if type == 'fa'
+    i(class='fa fa-#{name}')
+  else
+    i(class='icon material-icons')=name
 
 //- Blurb
 mixin blurb(icon, title, description, animation)

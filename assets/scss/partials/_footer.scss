@@ -1,13 +1,10 @@
 .footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   background: #212121;
-  padding: ($gutters / 2) 0;
-
-  .col {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
+  padding: ($gutters / 2) ((100% - $width) / 2);
 
   .copyright {
     margin: ($gutters / 2) 0;
