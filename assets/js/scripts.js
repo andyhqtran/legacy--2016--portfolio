@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('.page').after($('<div class="toast"><p>Hey there! Just wanted to let you know that this site is still under development.</p><button ripple ripple-color="#2196F3" class="btn">Okay</button></div>').delay(3000).fadeOut(300, 'swing'));
+  $('.page').after($('<div class="toast"><p>Hey there! Just wanted to let you know that this site is still under development.</p></div>').delay(3000).fadeOut(300, 'swing'));
 
   // Append Top Button
   $('body').append('<a id="top" href="#" ripple ripple-color="#FFFFFF" class="material-icons">&#xE316;</a>');
@@ -153,12 +153,6 @@ $(document).ready(function () {
   animation('.reasons ', 3, 3);
 
   animation('.error ', 2, 0);
-
-  $('.toast').children('.btn').on('click', function () {
-    $(this).parent().delay(300).fadeOut(300, 'swing', function () {
-      $(this).remove();
-    });
-  });
 
   $('class').on('click', function (e) {
     e.preventDefault();
