@@ -35,9 +35,9 @@ mixin blurb(icon, title, description, animation)
     p=description
 
 //- Testimonial
-mixin testimonial(quote, author, url, active)
+mixin testimonial(quote, avatar, author, url, active)
   blockquote(class=active ? 'testimonial active': 'testimonial')
+    div(class='avatar'): img(src='#{avatar}')
     p(class='quote')=quote
     span(class='meta')
-      div(class='avatar'): img(src='assets/img/avatar.png')
       a(href=url)=author
