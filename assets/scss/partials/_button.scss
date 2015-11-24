@@ -25,4 +25,8 @@
     background: $white;
     color: $accent;
   }
+
+  &.inverse {
+    background: $black;
+  }
 }
