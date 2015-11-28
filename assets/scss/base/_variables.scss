@@ -10,24 +10,16 @@ $regular: 400;
 $light: 300;
 $thin: 100;
 
-// Color
-$white: #FFFFFF;
-$black: #000000;
-$dark-gray: rgba($black, 0.8);
-$gray: rgba($black, 0.6);
-$light-gray: rgba($black, 0.4);
-$lighter-gray: rgba($black, 0.2);
-
-// Theme Color
-$accent: #2196F3;
-$secondary: #F37E21;
+// Browser Settings
+$default-browser-font-size: 16;
 
 // Base Setting
+$base-background: #F3F3F3;
 $base-color: $gray;
 $base-font-family: $body-font, sans-serif;
 $base-font-size: 14px;
 $base-font-weight: $regular;
-$base-line-height: 1.6em;
+$base-line-height: em(26);
 
 // Layout Settings
 $background: #F3F3F3;
