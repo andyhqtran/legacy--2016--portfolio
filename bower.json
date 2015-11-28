@@ -20,7 +20,8 @@
     "jQuery-One-Page-Nav": "~3.0.0",
     "animate.css": "~3.4.0",
     "waypoints": "~4.0.0",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "typed.js": "~1.1.1"
   },
   "resolutions": {
     "jquery": "~2.1.4"
