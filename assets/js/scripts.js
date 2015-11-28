@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+  // Typed.js
+  var typedFirst = 'Hey-oh! I\'m Andy.^600',
+    typedSecond = 'Wanna know something?^300',
+    typedThird = 'I love to write code!';
+
+  $(".hero-text .greetings").typed({
+    strings: [typedFirst, typedSecond, typedThird]
+  });
+
+
   $('.page').after($('<div class="toast"><p>Hey there! Just wanted to let you know that this site is still under development.</p></div>').delay(3000).fadeOut(300, 'swing'));
 
   // Append Top Button
