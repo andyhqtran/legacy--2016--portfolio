@@ -16,13 +16,17 @@
 
     &.active {
       a {
-        color: $accent;
+        color: $white;
+
+        // color: $accent;
         font-weight: $bold;
       }
     }
 
     a {
-      color: $gray;
+      color: rgba($white, 0.6);
+
+      // color: $gray;
       font-size: 12px;
       font-weight: $semibold;
       text-decoration: none;
@@ -30,7 +34,7 @@
       transition: 0.3s ease;
 
       &:hover {
-        color: $dark-gray;
+        color: $white;
       }
     }
   }
