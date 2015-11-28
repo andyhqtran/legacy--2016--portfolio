@@ -10,23 +10,11 @@ html
     // Header
     include lib/header
 
+    // Hero
+    include lib/hero
+
     // Page Container
     .page
-
-      // Hero
-      section(class='hero')
-        +container('true'): +row: +col(12)
-
-          // Hero Text
-          div(class='hero-text')
-            h1(animation-id='1') I'm Andy Tran.
-            p(animation-id='2') Hello, I am a self-taught front-end website developer. Sailing through life, I unexpectedly developed a strong passion for website development in which I use to help the community around me. I spend at least 12 hours a day, pouring my heart into code. You can often find me doing random pens on CodePen!
-            a(class='btn alt'
-               href='/portfolio'
-               data-anchor='true'
-               ripple
-               ripple-color='#{accent}'
-               animation-id='3') View Portfolio
 
       // Reasons
       section(class='reasons')
