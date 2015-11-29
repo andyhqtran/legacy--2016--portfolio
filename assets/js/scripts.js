@@ -12,9 +12,6 @@ $(document).ready(function () {
 
   $('.page').after($('<div class="toast"><p>Hey there! Just wanted to let you know that this site is still under development.</p></div>').delay(3000).fadeOut(300, 'swing'));
 
-  // Append Top Button
-  $('body').append('<a id="top" href="#" ripple ripple-color="#FFFFFF" class="material-icons">&#xE316;</a>');
-
   // Ripple
   function ripple() {
     $('[ripple]').on('click', function (e) {
