@@ -159,6 +159,8 @@ $(document).ready(function () {
 
   animation('.reasons ', 3, 3);
 
+  animation('.information ', 4, 6);
+
   animation('.error ', 2, 0);
 
   $('class').on('click', function (e) {
