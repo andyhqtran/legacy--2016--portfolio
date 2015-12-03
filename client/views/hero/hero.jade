@@ -1,0 +1,14 @@
+template(name='hero')
+  section(class='hero')
+    div(class='container'): div(class='row'): div(class='col col-12')
+      // Hero Text
+      div(class='hero-text')
+        h1(animation-id='1')
+          span(class='greetings')
+        p(animation-id='2') A kick-ass front-end website developer based in San Jose, CA.
+        a(class='btn alt'
+           href='{{pathFor "About"}}'
+           data-anchor='true'
+           ripple
+           ripple-color='#000'
+           animation-id='3') Learn More

@@ -1,0 +1,11 @@
+template(name='nav')
+  nav(class='nav'): ul
+    each items
+      li: a(class=isActive
+            href=pathFor(name))=name
+
+    a(class='nav-toggle'
+      href='#')
+      span
+      span
+      span

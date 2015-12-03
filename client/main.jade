@@ -75,11 +75,19 @@ head
        sizes='152x152'
        href='img/favicon/152x152.png')
 
+  script(src='js/typed.js')
+
 template(name='main')
   // Header
   +header
 
-  // Content
-  +yield
+  if isHome
+    +hero
+
+  // Page
+  div(class='page')
+
+    // Content
+    +yield
 
   // Footer

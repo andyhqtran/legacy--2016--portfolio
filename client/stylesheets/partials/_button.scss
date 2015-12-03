@@ -1,0 +1,36 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  background: $white;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 3px;
+
+  @include elevation(1);
+
+  color: $accent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: $semibold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus {
+    @include elevation(3);
+  }
+
+  // Primary
+  &.primary {
+    background: $accent;
+    color: $white;
+  }
+
+  // Inverse
+  &.inverse {
+    background: ligthen($black, 5%);
+    color: $white;
+  }
+}
