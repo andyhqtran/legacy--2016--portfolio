@@ -1,0 +1,72 @@
+@import "../base/fonts";
+
+@import "../base/colors";
+
+$height: 100px;
+
+// Header
+.header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: $height;
+  padding: 0 (10% / 2);
+  box-sizing: border-box;
+  text-shadow: 0 2px 2px rgba($black, 0.2);
+  transform: translateX(-50%);
+  transition: 0.3s ease, width 0.3s ease 0.3s;
+}
+
+// Brand
+.brand {}
+
+// Logo
+.logo {
+  height: 30px;
+}
+
+// Nav
+.nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    margin: 0 40px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &.active {
+      a {
+        color: $white;
+        font-weight: $bold;
+      }
+    }
+
+    a {
+      color: rgba($white, 0.8);
+      font-size: 12px;
+      font-weight: $semibold;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

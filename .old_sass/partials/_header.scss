@@ -15,29 +15,4 @@
   text-shadow: 0 2px 2px rgba($black, 0.2);
   transform: translateX(-50%);
   transition: 0.3s ease, width 0.3s ease 0.3s;
-
-  &.hidden {
-    opacity: 0;
-  }
-
-  &.appear {
-    z-index: 30;
-    background: rgba($white, 0.95);
-    box-shadow: 0 2px 0 rgba($black, 0.1);
-    width: 100%;
-    text-shadow: none;
-    opacity: 1;
-
-    .nav {
-      .active {
-        a {
-          color: $accent;
-        }
-      }
-
-      a {
-        color: $gray;
-      }
-    }
-  }
 }
