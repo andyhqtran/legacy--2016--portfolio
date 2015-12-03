@@ -1,6 +1,0 @@
-RewriteEngine on
-RewriteRule ^home$ index.html [NC]
-RewriteRule ^portfolio$ portfolio.html [NC]
-RewriteRule ^contact$ contact.html [NC]
-RewriteRule ^error$ 404.html [NC]
-ErrorDocument 404 /404.html
