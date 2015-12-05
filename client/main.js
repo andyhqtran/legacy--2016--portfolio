@@ -5,6 +5,11 @@ Template.main.helpers({
     if (Session.get('active') === 'Home') {
       return true;
     }
+  },
+  is404: function () {
+    if (Session.get('active') === '404') {
+      return true;
+    }
   }
 });
 
