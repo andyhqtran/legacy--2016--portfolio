@@ -1,8 +1,11 @@
 template(name='nav')
   nav(class='nav'): ul
     each items
-      li: a(class=isActive
-            href=pathFor(name))=name
+      if isResume
+        li: a(href=path)=name
+      else
+        li: a(class=isActive
+              href=pathFor(name))=name
 
     a(class='nav-toggle'
       href='#')
