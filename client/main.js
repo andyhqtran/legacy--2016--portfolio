@@ -66,6 +66,14 @@ Template.main.helpers({
     } else {
       return false;
     }
+
+    $(window).resize(function () {
+      if (windowWidth < 480 && navTotal < 2) {
+        return true;
+      } else {
+        return false;
+      }
+    });
   }
 });
 
