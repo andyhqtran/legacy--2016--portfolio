@@ -3,8 +3,8 @@ template(name='hero')
     div(class='container'): div(class='row'): div(class='col col-12')
       if is404
         +errorText
-      else if isAbout
-        +aboutText
+      else if isShowcase
+        +showcaseText
       else if isContact
         +contactText
       else
@@ -19,7 +19,7 @@ template(name='heroText')
        href='{{pathFor "About"}}'
        data-anchor='true'
        ripple
-       ripple-color='#000'
+       ripple-color='#2196F3'
        animation-id='3') Learn More
 
 template(name='errorText')
@@ -30,16 +30,16 @@ template(name='errorText')
       br
       | If you would like more information, feel free to <a href='mailto:hello@andytran.me'>contact me</a>.
 
-template(name='aboutText')
+template(name='showcaseText')
   // Contact Text
   div(class='hero-text')
     h1(animation-id='1')
       span(class='greetings')
-    p(animation-id='2') A kick-ass front-end website developer based in San Jose, CA.
+    p(animation-id='2') A showcase of projects that I have worked on.
 
 template(name='contactText')
   // Contact Text
   div(class='hero-text')
     h1(animation-id='1')
       span(class='greetings')
-    p(animation-id='2') Don't be shy, just ask me anything!
+    p(animation-id='2') Don't be shy! Feel free to ask me anything.

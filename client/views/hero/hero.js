@@ -5,8 +5,8 @@ Template.hero.helpers({
     }
   },
 
-  isAbout: function () {
-    if (Session.get('active') === 'About') {
+  isShowcase: function () {
+    if (Session.get('active') === 'Showcase') {
       return true;
     }
   },
@@ -21,17 +21,17 @@ Template.hero.helpers({
 Template.heroText.onRendered(function () {
 
   // Typed.js
-  var typedText = ['Hey-oh! I\'m Andy.^600', 'Wanna know something?^300', 'I love to write code!'];
+  var typedText = ['Hey-oh!^600', 'Let\'s get to know me!^600', 'I am Andy Tran.'];
 
   $(".hero-text .greetings").typed({
     strings: typedText
   });
 });
 
-Template.aboutText.onRendered(function () {
+Template.showcaseText.onRendered(function () {
 
   // Typed.js
-  var typedText = ['Let\'s get to know me! ^300', 'I am Andy Tran.'];
+  var typedText = ['What have I done?', 'Just scroll down.'];
 
   $(".hero-text .greetings").typed({
     strings: typedText
