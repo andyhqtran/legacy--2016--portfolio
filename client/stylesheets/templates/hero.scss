@@ -52,6 +52,11 @@
     margin: 0 0 40px;
     color: rgba($white, 0.8);
     font-size: 16px;
+
+    a {
+      color: $white;
+      border-bottom: 1px solid $white;
+    }
   }
 
   .btn {

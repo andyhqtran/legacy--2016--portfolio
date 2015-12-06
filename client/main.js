@@ -1,18 +1,5 @@
 Template.main.onRendered(function () {});
 
-Template.main.helpers({
-  isHome: function () {
-    if (Session.get('active') === 'Home') {
-      return true;
-    }
-  },
-  is404: function () {
-    if (Session.get('active') === '404') {
-      return true;
-    }
-  }
-});
-
 Template.main.events({
   'mousedown [ripple]': function (e) {
 
