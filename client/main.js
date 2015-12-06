@@ -49,6 +49,24 @@ Template.main.onRendered(function () {
 
     console.log('scrolled');
   });
+
+  console.log($('.nav').length);
+
+  $(window).resize(function () {});
+});
+
+Template.main.helpers({
+
+  isMobile: function () {
+    var windowWidth = $(window).width(),
+      navTotal = $('.nav').length;
+
+    if (windowWidth < 480 && navTotal < 2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 });
 
 Template.main.events({

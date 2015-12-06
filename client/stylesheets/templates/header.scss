@@ -4,6 +4,9 @@
 // Colors
 @import "../base/colors";
 
+// Mixins
+@import "../base/mixins";
+
 $height: 100px;
 
 // Header
@@ -32,4 +35,10 @@ $height: 100px;
 // Logo
 .logo {
   height: 30px;
+}
+
+@include media(phone) {
+  .brand {
+    margin: 0 auto;
+  }
 }

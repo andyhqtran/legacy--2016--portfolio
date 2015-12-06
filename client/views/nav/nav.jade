@@ -7,8 +7,19 @@ template(name='nav')
         li: a(class=isActive
               href=pathFor(name))=name
 
-    a(class='nav-toggle'
-      href='#')
-      span
-      span
-      span
+template(name='mobileNav')
+  nav(class='nav nav-bottom'): ul
+    each items
+      if isResume
+        li: a(href=path
+              ripple=''
+              ripple-color='#2196F3')
+          i(class='icon pe-7s-#{icon}')
+          =name
+      else
+        li: a(class=isActive
+              href=pathFor(name)
+              ripple=''
+              ripple-color='#2196F3')
+          i(class='icon pe-7s-#{icon}')
+          =name
