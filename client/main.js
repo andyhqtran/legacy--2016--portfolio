@@ -13,10 +13,12 @@ Template.main.onRendered(function () {
     if (windowLocation > 0 || headerCheck > 0) {
       if (windowLocation > 50) {
         header.css({
-          top: -20
+          top: -20,
+          opacity: 0
         });
         heroText.css({
-          top: -20
+          top: -20,
+          opacity: 0
         });
       } else {
         header.css({
@@ -46,13 +48,7 @@ Template.main.onRendered(function () {
         top: '80%'
       }).removeClass('expand');
     }
-
-    console.log('scrolled');
   });
-
-  console.log($('.nav').length);
-
-  $(window).resize(function () {});
 });
 
 Template.main.helpers({
