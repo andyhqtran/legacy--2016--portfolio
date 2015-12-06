@@ -20,6 +20,7 @@ Template.hero.helpers({
 
 Template.heroText.onRendered(function () {
 
+  // Hero Animation (Init: 0; Total: 3;)
   animation('.hero ', 3, 0);
 
   // Typed.js
@@ -32,6 +33,7 @@ Template.heroText.onRendered(function () {
 
 Template.showcaseText.onRendered(function () {
 
+  // Hero Animation (Init: 0; Total: 3;)
   animation('.hero ', 3, 0);
 
   // Typed.js
@@ -44,6 +46,7 @@ Template.showcaseText.onRendered(function () {
 
 Template.contactText.onRendered(function () {
 
+  // Hero Animation (Init: 0; Total: 3;)
   animation('.hero ', 3, 0);
 
   // Typed.js
@@ -55,6 +58,5 @@ Template.contactText.onRendered(function () {
 });
 
 Template.errorText.onRendered(function () {
-
   animation('.hero ', 3, 0);
 });

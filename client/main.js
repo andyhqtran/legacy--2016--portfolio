@@ -37,8 +37,7 @@ animation = function (parent, total, initial) {
     for (var i = 0; i <= total; i++) {
       itemAnimationDelay(i, (i * 200));
     }
-
   }, {
-    offset: '50 %'
+    offset: '70%'
   });
 }

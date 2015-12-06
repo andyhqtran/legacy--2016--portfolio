@@ -5,28 +5,9 @@
 @import "../base/colors";
 
 // Information
-.information {
-  background: $white;
+.reasons {
+  background: #F3F3F3;
   padding: 48px 0;
-
-  .row {
-    align-items: center;
-  }
-
-  .title {
-    margin: 0 0 24px;
-  }
-
-  .description {
-    margin: 0 0 24px;
-    font-size: 16px;
-    line-height: 1.8em;
-  }
-
-  .codepen {
-    width: 90%;
-    margin: 48px auto;
-  }
 }
 
 // Blurb
