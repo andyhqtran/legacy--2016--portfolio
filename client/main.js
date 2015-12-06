@@ -24,3 +24,21 @@ Template.main.events({
     });
   }
 });
+
+animation = function (parent, total, initial) {
+
+  function itemAnimationDelay(id, delay) {
+    setTimeout(function () {
+      $('[animation-id=' + (id + initial) + ']').addClass('fadeInUp animated');
+    }, delay);
+  }
+
+  $(parent).waypoint(function () {
+    for (var i = 0; i <= total; i++) {
+      itemAnimationDelay(i, (i * 200));
+    }
+
+  }, {
+    offset: '50 %'
+  });
+}

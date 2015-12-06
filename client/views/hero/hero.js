@@ -20,6 +20,8 @@ Template.hero.helpers({
 
 Template.heroText.onRendered(function () {
 
+  animation('.hero ', 3, 0);
+
   // Typed.js
   var typedText = ['Hey-oh!^600', 'Let\'s get to know me!^600', 'I am Andy Tran.'];
 
@@ -29,6 +31,8 @@ Template.heroText.onRendered(function () {
 });
 
 Template.showcaseText.onRendered(function () {
+
+  animation('.hero ', 3, 0);
 
   // Typed.js
   var typedText = ['What have I done?', 'Just scroll down.'];
@@ -40,10 +44,17 @@ Template.showcaseText.onRendered(function () {
 
 Template.contactText.onRendered(function () {
 
+  animation('.hero ', 3, 0);
+
   // Typed.js
   var typedText = ['Got a question?', 'Send me a message!'];
 
   $(".hero-text .greetings").typed({
     strings: typedText
   });
+});
+
+Template.errorText.onRendered(function () {
+
+  animation('.hero ', 3, 0);
 });

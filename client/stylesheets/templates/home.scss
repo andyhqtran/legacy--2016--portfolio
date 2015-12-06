@@ -1,0 +1,84 @@
+// Fonts
+@import "../base/fonts";
+
+// Colors
+@import "../base/colors";
+
+// Information
+.information {
+  background: $white;
+  padding: 48px 0;
+
+  .row {
+    align-items: center;
+  }
+
+  .title {
+    margin: 0 0 24px;
+  }
+
+  .description {
+    margin: 0 0 24px;
+    font-size: 16px;
+    line-height: 1.8em;
+  }
+
+  .codepen {
+    width: 90%;
+    margin: 48px auto;
+  }
+}
+
+// Blurb
+.blurb {
+  margin: 24px 0;
+  padding: 0 24px;
+  text-align: center;
+
+  .icon {
+    margin: 0 0  48px;
+    color: $gray;
+    font-size: 48px;
+    font-weight: $bold;
+    transition: 0.3s ease;
+  }
+
+  .title {
+    margin: 0 0 24px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.8em;
+    text-align: left;
+  }
+
+  &:hover {
+    .icon {
+      color: $accent;
+      opacity: 0.8;
+      animation: pulse 1s infinite;
+    }
+
+    .title {
+      color: $accent;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
