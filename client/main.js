@@ -51,27 +51,7 @@ Template.main.onRendered(function () {
   });
 });
 
-Template.main.helpers({
-
-  isMobile: function () {
-    var windowWidth = $(window).width(),
-      navTotal = $('.nav').length;
-
-    if (windowWidth < 480 && navTotal < 2) {
-      return true;
-    } else {
-      return false;
-    }
-
-    $(window).resize(function () {
-      if (windowWidth < 480 && navTotal < 2) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-  }
-});
+Template.main.helpers({});
 
 Template.main.events({
   'mousedown [ripple]': function (e) {

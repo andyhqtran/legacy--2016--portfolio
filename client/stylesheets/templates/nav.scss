@@ -45,6 +45,50 @@
       font-weight: $bold;
     }
   }
+
+  &-bottom {
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background: $white;
+    width: 100%;
+    box-shadow: 0 0 4px rgba($black, 0.1);
+
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    li {
+      width: 25%;
+      flex-basis: 25%;
+      margin: 0;
+      text-align: center;
+    }
+
+    a {
+      display: block;
+      color: $gray;
+      padding: 12px 0;
+
+      &:hover {
+        color: $dark-gray;
+      }
+
+      &.active {
+        color: $accent;
+      }
+
+      .icon {
+        display: block;
+        margin: 0 0 4px;
+        font-size: em(24);
+        font-weight: $bold;
+      }
+    }
+  }
 }
 
 @include media(phone) {
@@ -52,47 +96,7 @@
     display: none;
 
     &-bottom {
-      z-index: 100;
-      position: fixed;
-      bottom: 0;
-      left: 0;
       display: block;
-      background: $white;
-      width: 100%;
-      box-shadow: 0 0 4px rgba($black, 0.1);
-
-      ul {
-        display: flex;
-        flex-wrap: nowrap;
-      }
-
-      li {
-        width: 25%;
-        flex-basis: 25%;
-        margin: 0;
-        text-align: center;
-      }
-
-      a {
-        display: block;
-        color: $gray;
-        padding: 12px 0;
-
-        &:hover {
-          color: $dark-gray;
-        }
-
-        &.active {
-          color: $accent;
-        }
-
-        .icon {
-          display: block;
-          margin: 0 0 4px;
-          font-size: em(24);
-          font-weight: $bold;
-        }
-      }
     }
   }
 }
