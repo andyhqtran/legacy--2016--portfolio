@@ -2,9 +2,9 @@
 $base-background: #F3F3F3;
 $base-color: $gray;
 $base-font-family: $body-font, sans-serif;
-$base-font-size: 14px;
+$base-font-size: rem(14);
 $base-font-weight: $regular;
-$base-line-height: em(26);
+$base-line-height: rem(26);
 
 // Layout Settings
 $background: #F3F3F3;
@@ -14,4 +14,4 @@ $max-width: 1920px;
 // Container Settings
 $container-max-width: 1280px;
 $columns: 12;
-$gutters: 24px;
+$gutters: rem(24);

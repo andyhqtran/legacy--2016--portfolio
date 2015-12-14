@@ -3,9 +3,13 @@ template(name='nav')
     each items
       if isResume
         li: a(href=path)=name
+      else if isContact
+        li(class=isActive): a(class='btn'
+              href=pathFor(name)
+              ripple=''
+              ripple-color='#FFF') Hire Me
       else
-        li: a(class=isActive
-              href=pathFor(name))=name
+        li(class=isActive): a(href=pathFor(name))=name
 
 template(name='mobileNav')
   nav(class='nav nav-bottom'): ul

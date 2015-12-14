@@ -1,15 +1,11 @@
 .page {
   z-index: 20;
   position: relative;
-  top: 80%;
-  background: $white;
+  top: 90%;
+  background: #F3F3F3;
   width: 90%;
   max-width: 100%;
+  border-radius: 3px;
   box-shadow: 0 0 30px rgba($black, 0.2);
   margin: 0 auto;
-  transition: 0.3s ease;
-
-  &.expand {
-    width: 100%;
-  }
 }

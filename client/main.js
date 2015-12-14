@@ -4,49 +4,17 @@ Template.main.onRendered(function () {
 
   $(window).scroll(function () {
     var windowLocation = $(window).scrollTop(),
-      pageContainer = $('.page'),
-      header = $('.header'),
+      hero = $('.hero'),
       heroText = $('.hero-text'),
       headerInital = 0,
       headerCheck = $('.header').offset().top;
 
     if (windowLocation > 0 || headerCheck > 0) {
-      if (windowLocation > 50) {
-        header.css({
-          top: -20,
-          opacity: 0
-        });
-        heroText.css({
-          top: -20,
-          opacity: 0
-        });
-      } else {
-        header.css({
-          top: (headerInital - (windowLocation)),
-          opacity: (1 - (windowLocation * .05))
-        });
-        heroText.css({
-          top: (headerInital - (windowLocation)),
-          opacity: (1 - (windowLocation * .05))
-        });
-      }
-      pageContainer.css({
-        top: '70%'
-      }).addClass('expand');
-    } else if (windowLocation > 300) {
-      console.log('50%');
+      heroText.addClass('fade');
+      hero.addClass('scaled');
     } else {
-      header.css({
-        top: 0,
-        opacity: 1
-      });
-      heroText.css({
-        top: 0,
-        opacity: 1
-      });
-      pageContainer.css({
-        top: '80%'
-      }).removeClass('expand');
+      heroText.removeClass('fade');
+      hero.removeClass('scaled');
     }
   });
 });
@@ -54,27 +22,25 @@ Template.main.onRendered(function () {
 Template.main.helpers({});
 
 Template.main.events({
-  'mousedown [ripple]': function (e) {
+  'click [ripple]': function (e) {
 
     // Ripple
-    $(e.target).on('click', function (e) {
-      var rippleDiv = $('<div class="ripple" />'),
-        rippleSize = 60,
-        rippleOffset = $(this).offset(),
-        rippleY = e.pageY - rippleOffset.top,
-        rippleX = e.pageX - rippleOffset.left,
-        ripple = $('.ripple');
+    var rippleDiv = $('<div class="ripple" />'),
+      rippleSize = 60,
+      rippleOffset = $(e.target).offset(),
+      rippleY = e.pageY - rippleOffset.top,
+      rippleX = e.pageX - rippleOffset.left,
+      ripple = $('.ripple');
 
-      rippleDiv.css({
-        top: rippleY - (rippleSize / 2),
-        left: rippleX - (rippleSize / 2),
-        background: $(this).attr("ripple-color")
-      }).appendTo($(this));
+    rippleDiv.css({
+      top: rippleY - (rippleSize / 2),
+      left: rippleX - (rippleSize / 2),
+      background: $(e.target).attr("ripple-color")
+    }).appendTo($(e.target));
 
-      window.setTimeout(function () {
-        rippleDiv.remove();
-      }, 1900);
-    });
+    window.setTimeout(function () {
+      rippleDiv.remove();
+    }, 1900);
   }
 });
 
@@ -91,6 +57,6 @@ animation = function (parent, total, initial) {
       itemAnimationDelay(i, (i * 200));
     }
   }, {
-    offset: '70%'
+    offset: '50%'
   });
 }

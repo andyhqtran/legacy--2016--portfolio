@@ -9,6 +9,12 @@ Template.nav.helpers({
     }
   },
 
+  isContact: function () {
+    if (this.name === 'Contact') {
+      return true
+    }
+  },
+
   isActive: function () {
     if (this.name === Session.get('active')) {
       return 'active';

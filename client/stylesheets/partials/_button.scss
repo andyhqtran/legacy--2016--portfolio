@@ -3,24 +3,19 @@
   outline: none;
   display: inline-block;
   background: $white;
-  padding: 12px 24px;
+  padding: rem(12) rem(24);
   border: 0;
   border-radius: 3px;
-
-  @include elevation(1);
-
   color: $accent;
   font-family: inherit;
   font-size: inherit;
   font-weight: $semibold;
+  line-height: rem(16);
   text-decoration: none;
-  text-transform: uppercase;
   transition: 0.3s ease;
 
   &:hover,
-  &:focus {
-    @include elevation(3);
-  }
+  &:focus {}
 
   // Primary
   &.primary {

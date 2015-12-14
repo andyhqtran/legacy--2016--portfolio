@@ -24,10 +24,11 @@ Template.heroText.onRendered(function () {
   animation('.hero ', 3, 0);
 
   // Typed.js
-  var typedText = ['Hey-oh!^600', 'Let\'s get to know me!^600', 'I am Andy Tran.'];
+  var typedText = ['Hey-oh!^600', 'I am Andy Tran.'];
 
   $(".hero-text .greetings").typed({
-    strings: typedText
+    strings: typedText,
+    startDelay: 1000
   });
 });
 

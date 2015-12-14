@@ -1,7 +1,7 @@
 // PX to EM Function
 $default-browser-font-size: 16;
 
-@function em($pixels, $context: $default-browser-font-size) {
+@function rem($pixels, $context: $default-browser-font-size) {
   @if unitless($pixels) {
     $pixels: $pixels * 1px;
   }
@@ -10,5 +10,5 @@ $default-browser-font-size: 16;
     $context: $context * 1px;
   }
 
-  @return $pixels / $context * 1em;
+  @return $pixels / $context * 1rem;
 }
