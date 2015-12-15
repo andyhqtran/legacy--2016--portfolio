@@ -14,18 +14,19 @@
   text-decoration: none;
   transition: 0.3s ease;
 
-  &:hover,
-  &:focus {}
-
-  // Primary
-  &.primary {
-    background: $accent;
+  &.border {
+    background: 0;
+    box-shadow: inset 0 0 0 1px $white;
     color: $white;
   }
 
-  // Inverse
-  &.inverse {
-    background: ligthen($black, 5%);
+  &-primary {
+    background: $accent;
     color: $white;
+
+    &.border {
+      box-shadow: inset 0 0 0 1px $accent;
+      color: $accent;
+    }
   }
 }
