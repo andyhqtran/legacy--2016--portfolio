@@ -9,13 +9,13 @@ template(name='hero')
         +contactText
       else
         +heroText
+    a(href='#'): span(class='hero-arrow icon pe-7s-angle-down')
 
 template(name='heroText')
   div(class='hero-text')
     h1(animation-id='1')
       span(class='greetings')
     p(animation-id='2') A kick-ass front-end website developer based in San Jose, CA.
-  span(class='hero-arrow icon pe-7s-angle-down')
 
 template(name='errorText')
   // Error Text

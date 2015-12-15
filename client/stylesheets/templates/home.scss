@@ -48,6 +48,39 @@
   }
 }
 
+.case-study {
+  color: $white;
+  display: flex;
+  align-items: center;
+  background-size: 50%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  min-height: 500px;
+
+  .date {
+    margin: 0 0 20px;
+    color: rgba($white, 0.8);
+    text-transform: uppercase;
+
+    b {
+      border-bottom: 1px solid $white;
+      padding: 0 0 4px;
+      color: $white;
+      font-weight: $semibold;
+    }
+  }
+
+  .title {
+    margin: 0 0 20px;
+    color: inherit;
+    font-weight: $light;
+  }
+
+  .excerpt {
+    margin: 0 0 40px;
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
