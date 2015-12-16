@@ -7,12 +7,10 @@
 // Mixins
 @import "../base/mixins";
 
-$height: 100px;
-
 // Header
 .header {
-  z-index: 10;
-  position: fixed;
+  z-index: 100;
+  position: absolute;
   top: 0;
   left: 50%;
   display: flex;
@@ -21,11 +19,46 @@ $height: 100px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: $height;
+  height: 100px;
   padding: 0 (10% / 2);
   box-sizing: border-box;
   transform: translateX(-50%);
-  transition: 0.3s ease, width 0.3s ease 0.3s;
+  transition: 0.3s top ease, 0.3s background ease;
+
+  &.hide {
+    top: -200px;
+  }
+
+  &.fixed {
+    position: fixed;
+    background: $white;
+    height: 80px;
+    top: 0;
+    box-shadow: 0 0 15px rgba($black, 0.1);
+
+    .logo {
+      fill: $accent;
+    }
+
+    .nav {
+      li {
+        &.active {
+          a {
+            color: $accent;
+          }
+        }
+      }
+
+      a {
+        color: $gray;
+      }
+
+      .btn {
+        background: $accent;
+        color: $white;
+      }
+    }
+  }
 }
 
 // Brand
@@ -33,6 +66,7 @@ $height: 100px;
 
 // Logo
 .logo {
+  fill: $white;
   height: 30px;
 }
 

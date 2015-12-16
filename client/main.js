@@ -4,16 +4,31 @@ Template.main.onRendered(function () {
 
   $(window).scroll(function () {
     var windowLocation = $(window).scrollTop(),
+      header = $('.header'),
       hero = $('.hero'),
       heroText = $('.hero-text'),
+      heroArrow = $('.hero-arrow'),
       headerInital = 0,
       headerCheck = $('.header').offset().top;
 
     if (windowLocation > 0 || headerCheck > 0) {
-      heroText.addClass('fade');
+
+      if (windowLocation > 50 || headerCheck > 50) {
+        heroText.addClass('fade');
+      }
+
+      if (windowLocation > 500 || headerCheck > 500) {
+        header.addClass('fixed').removeClass('hide');
+      } else {
+        header.addClass('hide');
+      }
+
+      heroArrow.addClass('fade');
       hero.addClass('scaled');
     } else {
+      header.removeClass('fixed hide');
       heroText.removeClass('fade');
+      heroArrow.removeClass('fade');
       hero.removeClass('scaled');
     }
   });

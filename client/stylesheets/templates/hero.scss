@@ -25,7 +25,8 @@
   padding: rem(200) 0 0;
   box-sizing: border-box;
   text-align: center;
-  transition: 0.3s ease;
+  transition: 0.3s linear;
+  transform: translate(0, 0);
   overflow: hidden;
 
   &:before {
@@ -84,7 +85,13 @@
     color: rgba($white, 0.8);
     font-size: 48px;
     transform: translate(-50%, 0);
+    transition: 0.3s ease;
     animation: float 2s infinite;
+
+    &.fade {
+      bottom: 12%;
+      opacity: 0;
+    }
   }
 }
 

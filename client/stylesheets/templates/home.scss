@@ -49,13 +49,28 @@
 }
 
 .case-study {
-  color: $white;
   display: flex;
   align-items: center;
+  background-color: #FAFAFA;
   background-size: 50%;
   background-position: bottom right;
   background-repeat: no-repeat;
   min-height: 500px;
+  padding: 80px 0;
+  box-sizing: border-box;
+  color: $white;
+
+  &.light-background {
+    color: $gray;
+
+    .date {
+      color: rgba($gray, 0.8);
+
+      b {
+        color: $gray;
+      }
+    }
+  }
 
   .date {
     margin: 0 0 20px;
