@@ -1,11 +1,4 @@
-// Fonts
-@import "../base/fonts";
-
-// Colors
-@import "../base/colors";
-
-// Mixins
-@import "../base/mixins";
+@import "../base/base";
 
 // Header
 .header {
@@ -31,7 +24,7 @@
 
   &.fixed {
     position: fixed;
-    background: $white;
+    background: rgba($white, 0.95);
     height: 80px;
     top: 0;
     box-shadow: 0 0 15px rgba($black, 0.1);
