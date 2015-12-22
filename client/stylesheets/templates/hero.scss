@@ -12,15 +12,12 @@
 
 // Hero
 .hero {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
   background: $dark-gray url("../img/hero-4-min.jpg") top center no-repeat;
   background-size: 100%;
   width: 100%;
-  height: 90%;
+  height: 100%;
   min-height: 400px;
   padding: rem(200) 0 0;
   box-sizing: border-box;
@@ -62,14 +59,15 @@
   h1 {
     margin: 0 0 rem(20);
     color: $white;
-    font-size: 60px;
-    font-weight: $light;
+    font-size: rem(60);
+    font-weight: $thin;
   }
 
   p {
     margin: 0;
     color: rgba($white, 0.8);
-    font-size: 16px;
+    font-size: rem(16);
+    font-weight: $light;
 
     a {
       color: $white;
@@ -81,12 +79,12 @@
     position: absolute;
     bottom: 10%;
     left: 50%;
-    margin: 0 0 40px;
+    margin: 0 0 rem(40);
     color: rgba($white, 0.8);
-    font-size: 48px;
+    font-size: rem(48);
     transform: translate(-50%, 0);
     transition: 0.3s ease;
-    animation: float 2s infinite;
+    animation: float 2s ease infinite;
 
     &.fade {
       bottom: 12%;
