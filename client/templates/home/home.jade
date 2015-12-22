@@ -1,27 +1,30 @@
 template(name='home')
-  section(class='reasons')
-    div(class='container'): div(class='row')
-      div(class='col col-4')
-
+  section.reasons
+    .container: .row
+      .col.col-4
         // Blurb
-        div(class='blurb'
-            animation-id='4')
-          i(class='icon pe-7s-like')
-          h4(class='title') Passionate
+        .blurb(animation-id='4')
+          i.icon.pe-7s-like
+          h4.title Passionate
           p There's not that I love more then writing code. Just ask anyone that I know, they'll surely say the same!
 
-      div(class='col col-4')
+      .col.col-4
         // Blurb
-        div(class='blurb'
-            animation-id='5')
-          i(class='icon pe-7s-gleam')
-          h4(class='title') Lightning Fast
+        .blurb(animation-id='5')
+          i.icon.pe-7s-gleam
+          h4.title Lightning Fast
           p Time is money, which is why I try my best to get everything done as clean &amp; efficient as possible.
 
-      div(class='col col-4')
+      .col.col-4
         // Blurb
-        div(class='blurb'
-            animation-id='6')
-          i(class='icon pe-7s-light')
-          h4(class='title') Creative
+        .blurb(animation-id='6')
+          i.icon.pe-7s-light
+          h4.title Creative
           p If I'm not coding, I'm likely off somewhere letting my mind flow with creativity!
+
+  .section.case-study#case-study-1
+    .container: .row
+      .col.col-12
+        h4 Maverick - App & Software Landing Page
+        p Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
+        a.btn.btn-primary(href='#') Read More
