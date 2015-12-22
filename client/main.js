@@ -1,16 +1,14 @@
 Template.main.onRendered(function () {
-  // Scroll Check
-  var windowInitial = 0;
 
   $(window).scroll(function () {
     var windowLocation = $(window).scrollTop(),
       header = $('.header'),
       headerInital = 0,
-      headerCheck = $('.header').offset().top;
+      headerLocation = $('.header').offset().top;
 
-    if (windowLocation > 0 || headerCheck > 0) {
+    if (windowLocation > 0 || headerLocation > 0) {
 
-      if (windowLocation > 500 || headerCheck > 500) {
+      if (windowLocation > 300 || headerLocation > 300) {
         header.addClass('fixed').removeClass('hide');
       } else {
         header.addClass('hide');
