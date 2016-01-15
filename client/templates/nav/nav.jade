@@ -1,12 +1,6 @@
 template(name='nav')
   nav.nav: ul
-    each items
-      if isResume
-        li: a(href=path)=name
-      else if isContact
-        li(class=isActive): a(class='btn'
-              href=pathFor(name)
-              ripple=''
-              ripple-color='#FFF') Hire Me
-      else
-        li(class=isActive): a(href=pathFor(name))=name
+    li(class="{{isActiveRoute 'Home'}}"): a(href="{{pathFor 'Home'}}") Home
+    li: a(href='http://andy.design') Freebies
+    li: a(href='https://represent.io/andy') Resume
+    li(class="{{isActiveRoute 'Contact'}}"): a(href="{{pathFor 'Contact'}}") Contact

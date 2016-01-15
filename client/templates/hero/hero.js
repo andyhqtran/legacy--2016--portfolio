@@ -5,12 +5,6 @@ Template.hero.helpers({
     }
   },
 
-  isShowcase: function () {
-    if (Session.get('active') === 'Showcase') {
-      return true;
-    }
-  },
-
   isContact: function () {
     if (Session.get('active') === 'Contact') {
       return true;
