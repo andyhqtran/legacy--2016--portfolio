@@ -18,14 +18,14 @@
   transform: translateX(-50%);
   transition: 0.3s top ease, 0.3s background ease;
 
-  &.hide {
+  &--hide {
     top: -200px;
   }
 
-  &.fixed {
+  &--fixed {
     position: fixed;
     background: rgba($white, 0.95);
-    height: 80px;
+    height: 60px;
     top: 0;
     box-shadow: 0 0 15px rgba($black, 0.1);
 
@@ -61,7 +61,7 @@
 }
 
 @include media(phone) {
-  .brand {
+  .header__brand {
     margin: 0 auto;
   }
 }

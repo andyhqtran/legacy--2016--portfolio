@@ -9,13 +9,13 @@ Template.main.onRendered(function () {
     if (windowLocation > 0 || headerLocation > 0) {
 
       if (windowLocation > 300 || headerLocation > 300) {
-        header.addClass('fixed').removeClass('hide');
+        header.addClass('header--fixed').removeClass('header--hide');
       } else {
-        header.addClass('hide');
+        header.addClass('header--hide');
       }
 
     } else {
-      header.removeClass('fixed hide');
+      header.removeClass('header--fixed header--hide');
     }
   });
 });
