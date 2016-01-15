@@ -1,7 +1,7 @@
 template(name='nav')
   nav.nav: ul
     li(class="{{isActiveRoute 'Home'}}"): a(href="{{pathFor 'Home'}}") Home
-    li: a(href='http://andy.design') Freebies
+    li: a(href='http://andy.design') Library
     li: a(href='https://represent.io/andy') Resume
     li(class="{{isActiveRoute 'Contact'}}"): a.btn(href="{{pathFor 'Contact'}}"
                                                    ripple=''
