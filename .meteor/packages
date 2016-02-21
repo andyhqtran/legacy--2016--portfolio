@@ -19,7 +19,40 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 
+http
+meteorhacks:ssr
+meteorhacks:npm
+# meteorhacks:kadira
+service-configuration
+spiderable
+underscore
+
+# Router
+iron:router
+zimme:active-route
+multiply:iron-router-progress
+reywood:iron-router-ga
+
+# Account Packages
+accounts-base
+accounts-ui
+accounts-ui-unstyled
+accounts-facebook
+accounts-twitter
+accounts-password
+email
+
+# Secruity
+force-ssl
+browser-policy
+check
+audit-argument-checks
+
+# Test
+# mike:mocha
+
+# Compilers
 mquandalle:jade
 fourseven:scss
 
-iron:router
+npm-container
