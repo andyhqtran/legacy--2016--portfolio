@@ -35,3 +35,8 @@ node_modules
 *.html
 *.css
 *.map
+
+# Meteor
+mup.json
+settings.json
+settings-production.json
