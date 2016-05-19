@@ -23,20 +23,8 @@
 *.sublime-workspace
 nbproject
 
-# Sass Cache
+# Development
 .sass-cache
-
-# Folders
-components
 bower_components
+npm-debug.log
 node_modules
-
-# Dev Purpose
-*.html
-*.css
-*.map
-
-# Meteor
-mup.json
-settings.json
-settings-production.json
